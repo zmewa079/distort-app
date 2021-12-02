@@ -1,0 +1,72 @@
+.submit {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+input {
+
+}
+
+button {
+    
+}
+
+body {
+    background-color: purple;
+    margin: 0;
+}
+
+.toggle {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 20% 60% 10% 10%;
+    background-color: aqua;
+    justify-items: center;
+}    
+
+.login {
+    grid-column: 3;
+}
+
+.signup {
+    grid-column: 4;
+}
+
+.users {
+    grid-column: 3;
+}
+
+.logout {
+    grid-column: 4;
+}
+
+.distort {
+    grid-column: 2;
+}
+
+.welcome {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.nav {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color:seagreen;
+    text-align: center;
+    align-items: center;
+}
+
+.mv {
+    grid-column: 2;
+}
+
+.msc {
+
+}
+
+.pc {
+
+}
