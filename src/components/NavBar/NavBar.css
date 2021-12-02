@@ -1,0 +1,48 @@
+body {
+    background-color: purple;
+    margin: 0;
+}
+
+.in {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
+    background-color: aqua;
+}    
+
+.a {
+    grid-column: 3;
+}
+
+.b {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.welcome {
+    grid-column: 1;
+}
+
+.in1 {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color:seagreen;
+    text-align: center;
+}
+
+.out {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:seagreen;
+    text-align: center;
+}
+
+.q {
+
+}
+
+.w {
+
+}
