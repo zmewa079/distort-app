@@ -15,7 +15,10 @@ const Users = () => {
       {users.length ? 
       <>
         {users.map(user=>
+        <>
           <p key={user._id}>{user.name}</p>
+          <p>{user.profile.followers.length}</p>
+        </>
         )}
       </>
       :
@@ -24,5 +27,5 @@ const Users = () => {
     </>
   );
 }
- 
+
 export default Users;
