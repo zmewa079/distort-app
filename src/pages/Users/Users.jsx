@@ -17,7 +17,10 @@ const Users = () => {
         {users.map(user=>
         <>
           <p key={user._id}>{user.name}</p>
-          <p>{user.profile.followers.length}</p>
+          <p>Followers: {user.profile.followers.length}</p>
+          <a href="/movie-list">Movie List</a> <br></br>
+          <a href="/music-list">Music List</a> <br></br>
+          <a href="/podcast-list">Podcast List</a> <br></br>
         </>
         )}
       </>
