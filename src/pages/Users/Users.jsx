@@ -18,9 +18,9 @@ const Users = () => {
         <>
           <p key={user._id}>{user.name}</p>
           <p>Followers: {user.profile.followers.length}</p>
-          <a href="/movie-list">Movie List</a> <br></br>
-          <a href="/music-list">Music List</a> <br></br>
-          <a href="/podcast-list">Podcast List</a> <br></br>
+          <a href="/movie-list">Movie List {user ? user.profile.movieList : "no movie list found"}</a> <br></br>
+          <a href="/music-list">Music List {user ? user.profile.musicList : "no music list found"}</a> <br></br>
+          <a href="/podcast-list">Podcast List {user ? user.profile.podcastList : "no podcast list found"} </a> <br></br>
         </>
         )}
       </>
