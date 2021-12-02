@@ -1,0 +1,5 @@
+//users.jsx, update so the user name and user list comes up
+//each to have a conditional statement, if there are no items on list, render link to those pages
+//(link)add a music list 
+//add movie list
+//add podcast list

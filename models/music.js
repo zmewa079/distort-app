@@ -9,7 +9,7 @@ const reviewSchema = new mongoose.Schema({
 timestamps: true
 })
 
-const artistSchema = new mongoose.Schema({
+const musicSchema = new mongoose.Schema({
   name: String,
   Type: String,
   Description: String,
@@ -21,8 +21,8 @@ const artistSchema = new mongoose.Schema({
   timestamps: true,  
 })
 
-const Artist = mongoose.model('Artist', artistSchema)
+const Music = mongoose.model('Music', musicSchema)
 
 export {
-  Artist
+  Music
 }
