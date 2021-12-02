@@ -7,30 +7,27 @@ const NavBar = ({ user, handleLogout }) => {
 			{user ? (
 				<nav>
 					<div>
-						<ul>
-							<li>
+							<p>
 								Welcome, {user.name}
-							</li>
-							<li>
-                <Link to="/users">Users</Link>
-              </li>
-							<li>
+							</p>
+							<p>
+								<Link to="/users">Users</Link>
+							</p>
+							<p>
 								<Link to='' onClick={handleLogout}>LOG OUT</Link>
-							</li>
-						</ul>
+							</p>
 					</div>
 				</nav>
 			) : (
 				<nav>
 					<div>
-						<ul>
-							<li>
-								<Link to="/login">Log In</Link>
-							</li>
-							<li>
-								<Link to="/signup">Sign Up</Link>
-							</li>
-						</ul>
+						<p>
+						<Link to="/login">Log In</Link>
+						</p>
+						<p>
+						<Link to="/signup">Sign Up</Link>
+						</p>
+
 					</div>
 				</nav>
 			)}
