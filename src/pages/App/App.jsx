@@ -6,6 +6,9 @@ import Login from '../Login/Login'
 import Landing from '../Landing/Landing'
 import Users from '../Users/Users'
 import * as authService from '../../services/authService'
+import Movies from '../Movies/Movies.jsx'
+import Podcasts from '../Podcasts/Podcasts.jsx'
+import Music from '../Music/Music.jsx'
 
 const App = () => {
 	const [user, setUser] = useState(authService.getUser())
@@ -29,6 +32,9 @@ const App = () => {
 				<Route path='/signup' element={<Signup handleSignupOrLogin={handleSignupOrLogin} />} />
 				<Route path='/login' element={<Login handleSignupOrLogin={handleSignupOrLogin} />} />
 				<Route path='/users' element={user ? <Users /> : <Navigate to='/login' />} />
+				<Route path='/movies' element={<Movies user={user} />} />
+				<Route path='/podcasts' element={<Podcasts user={user} />} />
+				<Route path='/music' element={<Music user={user} />} />
 			</Routes>
 		</>
 	);

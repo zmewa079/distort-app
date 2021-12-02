@@ -1,11 +1,11 @@
-import styles from './Movies.css'
+import styles from './Music.css'
 
-const Movies = ({ user }) => {
+const Music = ({ user }) => {
     return (
         <>
             <main className={styles.container}>
                 <h1>
-                    Welcome to the movies page
+                    Welcome to the Music page
                 </h1>
             </main>
             <body>
@@ -15,4 +15,4 @@ const Movies = ({ user }) => {
     )
 }
 
-export default Movies
+export default Music
