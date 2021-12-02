@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as userService from '../../services/userService'
+import { Link } from 'react-router-dom'
 
 const Users = () => {
   const [users, setUsers] = useState([])
@@ -18,9 +19,9 @@ const Users = () => {
         <>
           <p key={user._id}>{user.name}</p>
           <p>Followers: {user.profile.followers.length}</p>
-          <a href="/movie-list">Movie List {user ? user.profile.movieList : "no movie list found"}</a> <br></br>
-          <a href="/music-list">Music List {user ? user.profile.musicList : "no music list found"}</a> <br></br>
-          <a href="/podcast-list">Podcast List {user ? user.profile.podcastList : "no podcast list found"} </a> <br></br>
+          <h4>Movie Lists: { user.profile.movieList.length ? <p>I am a list of movie lists </p> : <p><Link to="/movies">Get movie suggestions</Link></p>} </h4> 
+          <h4>Music Lists: { user.profile.musicList.length ? <p> I am a list of music list</p> : <p><Link to="/music">Get music suggestions</Link></p>} </h4> 
+          <h4>Podcast Lists: { user.profile.podcastList.length ? <p> I am a list of podcast list</p> : <p><Link to="/podcasts">Get podcast suggestions</Link></p>} </h4> 
         </>
         )}
       </>
