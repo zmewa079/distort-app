@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 
 const SearchForm = (props) => {
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     type: '',
@@ -18,7 +18,7 @@ const SearchForm = (props) => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      
+      navigate(`/${type === 'movie' || type === 'podcast' ? type + 's' : type}`)
     } catch (err) {
       console.log(err)
     }
@@ -42,18 +42,17 @@ const SearchForm = (props) => {
         onChange={handleChange}
       />
       <br />
-      <p>Type</p>
-      <select name="type" placeholder="Select Type" onChange={handleChange}>
-      <option value="">Select Category</option>
-      <option value="movie">Movie</option>
-      <option value="music">Music</option>
-      <option value="podcast">Podcast</option>
-      </select>
+        <p>Type</p>
+        <select name="type" placeholder="Select Type" onChange={handleChange}>
+          <option value="">Select Category</option>
+          <option value="movie">Movie</option>
+          <option value="music">Music</option>
+          <option value="podcast">Podcast</option>
+        </select>
       <br />
-      <button disabled={isFormInvalid()}>Get Suggestions</button>
-      <Link to="/">
-        <button>Cancel</button>
-      </Link>
+        <button disabled={isFormInvalid()}>
+          Get Suggestions
+        </button>
     </form>
   );
 }

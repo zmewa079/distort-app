@@ -5,7 +5,7 @@ const Podcasts = ({ user }) => {
         <>
             <main className={styles.container}>
                 <h1>
-                    Welcome to the Podacasts page
+                    Welcome to the Podcasts page
                 </h1>
             </main>
             <body>
