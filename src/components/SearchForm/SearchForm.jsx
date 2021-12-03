@@ -35,7 +35,7 @@ const SearchForm = (props) => {
       onSubmit={handleSubmit}
     > 
       <p>Name</p>
-      <input placeholder="Select Name"
+      <input placeholder="Enter a name"
         type="text"
         value={name}
         name="name"
@@ -44,6 +44,7 @@ const SearchForm = (props) => {
       <br />
       <p>Type</p>
       <select name="type" placeholder="Select Type" onChange={handleChange}>
+      <option value="">Select Category</option>
       <option value="movie">Movie</option>
       <option value="music">Music</option>
       <option value="podcast">Podcast</option>
