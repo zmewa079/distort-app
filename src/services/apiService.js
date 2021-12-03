@@ -1,5 +1,5 @@
 function getSuggestions(name, type) {
-  return fetch(`/api/tasteDiveApi/${type}&${name}`)
+  return fetch(`/api/tasteDiveApi/${name}/${type}`)
   .then(res => res.json())
 }
 

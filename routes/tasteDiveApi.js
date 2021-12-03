@@ -3,6 +3,6 @@ import * as tasteDiveApiCtrl from '../controllers/tasteDiveApi.js'
 
 const router = Router()
 
-router.get('/:type&name', tasteDiveApiCtrl.getSuggestions)
+router.get('/:name/:type', tasteDiveApiCtrl.getSuggestions)
 
 export { router }
