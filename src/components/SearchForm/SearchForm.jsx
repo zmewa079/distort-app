@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { getSuggestions } from '../../services/apiService'
 
 
 const SearchForm = (props) => {
@@ -18,6 +19,10 @@ const SearchForm = (props) => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
+      getSuggestions(formData.name, formData.type)
+      .then(suggestionData => {
+        console.log(suggestionData)
+      })
       navigate(`/${type === 'movie' || type === 'podcast' ? type + 's' : type}`)
     } catch (err) {
       console.log(err)
