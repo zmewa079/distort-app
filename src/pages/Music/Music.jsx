@@ -1,15 +1,7 @@
 import styles from './Music.css'
-import React, { useState, useEffect } from 'react'
-
-
+import AddMusic from '../../components/AddMusic/AddMusic'
 
 const Music = ({ user, suggestions }) => {
-const [musicSuggestions, setMusicSuggestions] = useState([])
-
-    useEffect(()=> {
-        setMusicSuggestions(suggestions)
-    }, [])
-
     return (
         <>
             <main className={styles.container}>
@@ -22,6 +14,7 @@ const [musicSuggestions, setMusicSuggestions] = useState([])
             <>
                 <div>
                     <p>{suggestion.Name}</p>
+                    <AddMusic />
                 </div>
             </>  
             )}
@@ -30,9 +23,11 @@ const [musicSuggestions, setMusicSuggestions] = useState([])
     )
 }
 
-
 export default Music
 
 
 //map the result to a div
 //each div, map info inside the result (name, descriptions)[suggestionData.name]
+
+
+//

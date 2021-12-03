@@ -10,7 +10,7 @@ timestamps: true
 })
 
 const musicSchema = new mongoose.Schema({
-  name: String,
+  Name: String,
   Type: String,
   Description: String,
   wikiUrl: String,
