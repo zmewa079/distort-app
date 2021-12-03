@@ -52,5 +52,3 @@ Most people usually go off of the suggestions made by others in life. These sugg
 ---
 
 ## Stretch goals
-
-+ TBD
