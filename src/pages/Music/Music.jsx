@@ -1,6 +1,14 @@
 import styles from './Music.css'
+import React, { useState, useEffect } from 'react'
 
-const Music = ({ user, suggestionData }) => {
+
+
+const Music = ({ user, suggestions }) => {
+const [musicSuggestions, setMusicSuggestions] = useState([])
+
+    useEffect(()=> {
+        setMusicSuggestions(suggestions)
+    }, [])
 
     return (
         <>
@@ -10,15 +18,21 @@ const Music = ({ user, suggestionData }) => {
                 </h1>
             </main>
             <body>
-
+            {suggestions?.Similar?.Results.map(suggestion =>
+            <>
+                <div>
+                    <p>{suggestion.Name}</p>
+                </div>
+            </>  
+            )}
             </body>
         </>
     )
 }
 
+
 export default Music
 
-//pass the data to search from to this file 
-//set the state of this page to equal the suggestion data
+
 //map the result to a div
 //each div, map info inside the result (name, descriptions)[suggestionData.name]
