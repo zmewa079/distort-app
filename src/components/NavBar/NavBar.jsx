@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './NavBar.css'
+import SearchForm from '../SearchForm/SearchForm'
 
 const NavBar = ({ user, handleLogout }) => {
 	return (
@@ -34,8 +35,7 @@ const NavBar = ({ user, handleLogout }) => {
 							
 					</div>
 					<div class='submit'>
-						<input type="text" />
-						<button type='submit'>Search</button>
+						<SearchForm />
 					</div>
 				</nav>
 			) : (
