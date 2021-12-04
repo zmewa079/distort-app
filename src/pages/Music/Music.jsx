@@ -14,7 +14,7 @@ const Music = ({ user, suggestions }) => {
             <>
                 <div>
                     <p>{suggestion.Name}</p>
-                    <AddMusic />
+                    <AddMusic suggestion={suggestion}/>
                 </div>
             </>  
             )}

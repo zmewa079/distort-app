@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AddMusic = (props) => {
+const AddMusic = ({suggestion}) => {
   const [formData, setFormData] = useState({
     Name: '',
     Type: '',
@@ -19,7 +19,9 @@ const AddMusic = (props) => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      setFormData(formData.Name, formData.Type, formData.Description, formData.wikiUrl, formData.youtubeUrl)
+      setFormData(
+        formData.Name, 
+        formData.Type, formData.Description, formData.wikiUrl, formData.youtubeUrl)
     } catch (err) {
       console.log(err)
     }
@@ -78,7 +80,7 @@ const AddMusic = (props) => {
           name="youtubeUrl"
           onChange={handleChange}
         />
-        <button>Add To List</button>
+        <button >Add To List</button>
     </form>
   );
 }
