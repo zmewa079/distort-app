@@ -52,7 +52,7 @@ const NavBar = ({ user, handleLogout }) => {
 						</p>
 					</div>
 					<div class='nav'>
-							<p class = 'mvs'>
+							<p class = 'mv'>
 								<Link to="/movies">Movies</Link>
 							</p>
 							<p class = 'msc'>
@@ -63,8 +63,7 @@ const NavBar = ({ user, handleLogout }) => {
 							</p>
 					</div>
 					<div class='submit'>
-						<input type="text" />
-						<button type='submit'>Search</button>
+						<SearchForm />
 					</div>
 				</nav>
 			)}
