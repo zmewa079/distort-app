@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as userService from '../../services/userService'
 import './Users.css'
+import { Link } from 'react-router-dom';
 
 const Users = () => {
   const [users, setUsers] = useState([])
@@ -18,7 +19,10 @@ const Users = () => {
           {users.map(user=>
             <div class='pfcard'>
               <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwUXumi2-4L46JVm7bryAzGyWCD1SHYLfIw&usqp=CAU' alt=''></img>
-              <h2 class='name' key={user._id}>{user.name}</h2>
+              <>
+              <h2 class='name' key={user._id}>
+              {<Link to="/profile">{user.name}</Link>}</h2>
+              </>
               <h2 class='mvlst' >List of Movies</h2>
               <h2 class='mclst'>List of Music</h2>
               <h2 class='pdlst'>List of Podcasts</h2>

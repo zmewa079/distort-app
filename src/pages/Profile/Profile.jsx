@@ -1,19 +1,21 @@
 
 
-const Profile = ({user}) => {
+const Profile = ({users}) => {
 
   return (
       <>
           <main >
               <h1>
-                  Welcome to your profile page {user.name}
+                  profile page 
               </h1>
           </main>
           <body>
-
+            {users?.map(user =>
+              user.name
+              )}
           </body>
       </>
   )
-}
+            }
 
 export default Profile
