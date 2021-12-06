@@ -9,6 +9,7 @@ import * as authService from '../../services/authService'
 import Movies from '../Movies/Movies.jsx'
 import Podcasts from '../Podcasts/Podcasts.jsx'
 import Music from '../Music/Music.jsx'
+import Profile from '../Profile/Profile'
 
 const App = () => {
 	const [user, setUser] = useState(authService.getUser())
@@ -35,6 +36,7 @@ const App = () => {
 				<Route path='/movies' element={<Movies user={user} />} />
 				<Route path='/podcasts' element={<Podcasts user={user} />} />
 				<Route path='/music' element={<Music user={user} />} />
+				<Route path='/profile' element={<Profile user={user} />} />
 			</Routes>
 		</>
 	);
