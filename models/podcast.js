@@ -12,9 +12,9 @@ timestamps: true
 const podcastSchema = new mongoose.Schema({
   name: String,
   Type: String,
-  Description: String,
-  wikiUrl: String,
-  youtubeUrl: String,
+  wTeaser: String,
+  wUrl: String,
+  yUrl: String,
   reviews: [reviewSchema]
 },
 {

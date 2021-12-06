@@ -28,6 +28,3 @@ export default Music
 
 //map the result to a div
 //each div, map info inside the result (name, descriptions)[suggestionData.name]
-
-
-//
