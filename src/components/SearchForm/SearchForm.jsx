@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getSuggestions } from '../../services/apiService'
+import Music from '../../pages/Music/Music'
 
 
 const SearchForm = (props) => {
@@ -9,6 +10,8 @@ const SearchForm = (props) => {
     name: '',
     type: '',
   })
+
+const [suggestions, setSuggestions] = useState([])
 
   const handleChange = e => {
     setFormData({
@@ -21,7 +24,7 @@ const SearchForm = (props) => {
     try {
       getSuggestions(formData.name, formData.type)
       .then(suggestionData => {
-        console.log(suggestionData)
+        setSuggestions(suggestionData)
       })
       navigate(`/${type === 'movie' || type === 'podcast' ? type + 's' : type}`)
     } catch (err) {
@@ -35,6 +38,7 @@ const SearchForm = (props) => {
   }
 
   return (
+    <>
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
@@ -59,6 +63,8 @@ const SearchForm = (props) => {
           Get Suggestions
         </button>
     </form>
+    <Music suggestions={suggestions} />
+    </>
   );
 }
 
