@@ -26,6 +26,7 @@ const AddMusic = ({suggestion}) => {
         wUrl: suggestion.wUrl,
         yUrl: suggestion.yUrl
     })
+    
     } catch (err) {
       console.log(err)
     }
