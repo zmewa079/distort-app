@@ -3,6 +3,7 @@ import * as userService from '../../services/userService'
 import './Users.css'
 import { follow } from '../../services/followService';
 import FollowForm from '../../components/FollowForm/FollowForm';
+import { Link } from 'react-router-dom';
 
 const Users = (props) => {
   const [users, setUsers] = useState([])
@@ -15,6 +16,7 @@ const Users = (props) => {
   
 
   return (
+
     <div class='profilecard'>
       <h1 class='hello' >Hello. This is a list of all the users.</h1>
       {users.length ?
