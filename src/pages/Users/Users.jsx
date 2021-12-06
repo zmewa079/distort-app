@@ -21,7 +21,7 @@ const Users = () => {
               <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwUXumi2-4L46JVm7bryAzGyWCD1SHYLfIw&usqp=CAU' alt=''></img>
               <>
               <h2 class='name' key={user._id}>
-              {<Link to="/profile">{user.name}</Link>}</h2>
+              {<Link to="/profile" state={user}>{user.name}</Link>}</h2>
               </>
               <h2 class='mvlst' >List of Movies</h2>
               <h2 class='mclst'>List of Music</h2>
