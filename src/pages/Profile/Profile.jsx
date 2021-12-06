@@ -1,7 +1,6 @@
+import React, { useState } from 'react';
 
-
-const Profile = ({users}) => {
-
+const Profile = ({profile}) => {
   return (
       <>
           <main >
@@ -10,9 +9,7 @@ const Profile = ({users}) => {
               </h1>
           </main>
           <body>
-            {users?.map(user =>
-              user.name
-              )}
+          
           </body>
       </>
   )

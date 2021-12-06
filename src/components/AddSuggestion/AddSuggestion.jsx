@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AddMusic = ({suggestion}) => {
+const AddSuggestion = ({suggestion}) => {
   const [formData, setFormData] = useState({
     Name: '',
     Type: '',
@@ -45,4 +45,4 @@ const AddMusic = ({suggestion}) => {
   );
 }
 
-export default AddMusic
+export default AddSuggestion

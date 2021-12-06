@@ -1,5 +1,5 @@
 import styles from './Music.css'
-import AddMusic from '../../components/AddMusic/AddMusic'
+import AddMusic from '../../components/AddSuggestion/AddSuggestion'
 
 const Music = ({ user, suggestions }) => {
     return (
