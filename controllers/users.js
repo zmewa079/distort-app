@@ -5,6 +5,17 @@ function index(req, res) {
   .then(users => res.json(users))
 }
 
+function addFollower(req, res) {
+  User.findById(req.params.id)
+  .populate('profile')
+  .then(user => {
+    user.profile.following.push(req.params.follower)
+    user.save()
+    .then()
+  })
+}
+
 export {
   index,
+  addFollower
 }
