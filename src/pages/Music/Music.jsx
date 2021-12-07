@@ -1,5 +1,6 @@
 import styles from './Music.css'
 import AddMusic from '../../components/AddSuggestion/AddSuggestion'
+import { Link } from 'react-router-dom'
 
 const Music = ({ user, suggestions }) => {
     return (
@@ -13,8 +14,9 @@ const Music = ({ user, suggestions }) => {
             {suggestions?.Similar?.Results.map(suggestion =>
             <>
                 <div>
-                    <p>{suggestion.Name}</p>
+                    <p></p>
                     <AddMusic suggestion={suggestion}/>
+                    <h2>{<Link to="/details" state={suggestion}>{suggestion.Name}</Link>}</h2>
                 </div>
             </>  
             )}
