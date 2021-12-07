@@ -37,11 +37,10 @@ const App = () => {
 				<Route path='/movies' element={<Movies user={user} />} />
 				<Route path='/podcasts' element={<Podcasts user={user} />} />
 				<Route path='/music' element={<Music user={user} />} />
-				<Route path='/profile' element={<Profile user={user} />} />
+				<Route path='/profile' element={<Profile loggedInUser={user} />} />
 				<Route path='/details' element={<Details />} />
 			</Routes>
 		</>
 	);
 }
-
 export default App;
