@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 const List = (props) => {
   const [formData, setFormData] = useState({
@@ -7,6 +9,7 @@ const List = (props) => {
     createdBy: '',
     lists: ''
   })
+  
 
   const handleChange = e => {
     setFormData({
@@ -54,6 +57,7 @@ const List = (props) => {
       onChange={handleChange}
       />
     <button>Create List</button>
+    {<Link to='/' ><button>Cancel</button></Link>}
     </form>
   );
 }

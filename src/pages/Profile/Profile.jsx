@@ -32,7 +32,14 @@ const user = location.state
             <h2>
             Podcast List: {user.podcastList}
             </h2>
+            {loggedInUser.profile === user.profile ? 
+            <form
+            > 
             {<Link to="/create-list" ><button>Create List</button></Link>}
+            </form>
+            :
+            ''
+            }
             </body> 
         </main>
     </>
@@ -40,18 +47,3 @@ const user = location.state
             }
 
 export default Profile
-
-// {loggedInUser.profile === user.profile ? 
-//     <form
-//     > 
-//     <h2>List</h2>
-//     <input placeholder=""
-//         type="text"
-//         name="name"
-//     />
-//     <button >Add List</button>
-//     </form>
-//     :
-//     ''
-//     }
-

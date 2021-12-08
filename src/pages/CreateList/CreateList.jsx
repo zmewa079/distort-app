@@ -7,7 +7,6 @@ return (
     <>
     <h2>Create a New List</h2>
     <List />
-
     </>
   );
 }

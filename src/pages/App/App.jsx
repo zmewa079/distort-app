@@ -40,7 +40,7 @@ const App = () => {
 				<Route path='/music' element={<Music user={user} />} />
 				<Route path='/profile' element={<Profile loggedInUser={user} />} />
 				<Route path='/details' element={<Details />} />
-				<Route path='/create-list' element={<CreateList />} />
+				<Route path='/create-list' state={user} element={<CreateList />} />
 				
 			</Routes>
 		</>
