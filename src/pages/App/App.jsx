@@ -11,6 +11,7 @@ import Podcasts from '../Podcasts/Podcasts.jsx'
 import Music from '../Music/Music.jsx'
 import Profile from '../Profile/Profile'
 import Details from '../Details/Details'
+import CreateList from '../CreateList/CreateList'
 
 const App = () => {
 	const [user, setUser] = useState(authService.getUser())
@@ -37,11 +38,12 @@ const App = () => {
 				<Route path='/movies' element={<Movies user={user} />} />
 				<Route path='/podcasts' element={<Podcasts user={user} />} />
 				<Route path='/music' element={<Music user={user} />} />
-				<Route path='/profile' element={<Profile user={user} />} />
+				<Route path='/profile' element={<Profile loggedInUser={user} />} />
 				<Route path='/details' element={<Details />} />
+				<Route path='/create-list' state={user} element={<CreateList />} />
+				
 			</Routes>
 		</>
 	);
 }
-
 export default App;

@@ -13,8 +13,6 @@ const Users = (props) => {
       .then(users => setUsers(users))
   }, [])
 
-  
-
   return (
 
     <div class='profilecard'>
@@ -28,10 +26,13 @@ const Users = (props) => {
               <h2 class='name' key={user._id}>
               {<Link to="/profile" state={user}>{user.name}</Link>}</h2>
               </>
-              <h2 class='mvlst' >List of Movies</h2>
+              <h2 class='mvlst' >List of Movies </h2>
               <h2 class='mclst'>List of Music</h2>
               <h2 class='pdlst'>List of Podcasts</h2>
               <h3 class='fdlst'>Followers (0)</h3>
+              {props.loggedInUser.profile === user.profile ? '' :
+                  <FollowForm userToFollow={user._id} userFollowing={props.loggedInUser.profile} />
+                }
             </div>
           )}
         </>
@@ -41,5 +42,7 @@ const Users = (props) => {
     </div>
   );
 }
+
+
 
 export default Users

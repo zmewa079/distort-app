@@ -19,7 +19,7 @@ const suggestion = location.state
         </main>
       </>
   )
-            }
+      }
 
 export default Details
 
