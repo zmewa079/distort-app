@@ -1,6 +1,9 @@
 import styles from './Movies.css'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
+import SearchForm from '../../components/SearchForm/SearchForm'
 
-const Movies = ({ user }) => {
+const Movies = ({ user, suggestions }) => {
     return (
         <>
             <main className={styles.container}>
@@ -9,7 +12,7 @@ const Movies = ({ user }) => {
                 </h1>
             </main>
             <body>
-
+                <SearchForm suggestions={suggestions} />
             </body>
         </>
     )

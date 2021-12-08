@@ -1,3 +1,4 @@
+import SearchForm from '../../components/SearchForm/SearchForm'
 import styles from './Landing.module.css'
 
 const Landing = ({user}) => {
@@ -6,6 +7,9 @@ const Landing = ({user}) => {
       <h1>
         hello, {user ? user.name : "friend"}
       </h1>
+      <div>
+        <SearchForm />
+      </div>
     </main>
   )
 }
