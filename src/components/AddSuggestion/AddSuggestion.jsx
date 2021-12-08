@@ -32,9 +32,6 @@ const AddSuggestion = ({suggestion}) => {
     }
   }
   
-  // const { Name, Type, Description, wikiUrl, youtubeUrl } = formData
-  
-
   return (
     <form
       autoComplete="off"

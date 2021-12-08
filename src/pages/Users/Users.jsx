@@ -13,14 +13,13 @@ const Users = (props) => {
       .then(users => setUsers(users))
   }, [])
 
-  
-
   return (
 
     <div class='profilecard'>
       <h1 class='hello' >Hello. This is a list of all the users.</h1>
       {users.length ?
         <>
+
           {users.map(user => 
               <div class='pfcard'>
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwUXumi2-4L46JVm7bryAzGyWCD1SHYLfIw&usqp=CAU'></img>
@@ -30,6 +29,7 @@ const Users = (props) => {
                 <h2 class='pdlst'>List of Podcasts</h2>
                 <h3 class='fdlst'>Followers (0)</h3>
                 {props.loggedInUser.profile === user.profile ? '' :
+
                   <FollowForm userToFollow={user._id} userFollowing={props.loggedInUser.profile} />
                 }
             </div>
@@ -41,5 +41,7 @@ const Users = (props) => {
     </div>
   );
 }
+
+
 
 export default Users
