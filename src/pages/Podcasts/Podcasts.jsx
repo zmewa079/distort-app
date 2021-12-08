@@ -1,6 +1,9 @@
 import styles from './Podcasts.css'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
+import SearchForm from '../../components/SearchForm/SearchForm'
 
-const Podcasts = ({ user }) => {
+const Podcasts = ({ user, suggestions }) => {
     return (
         <>
             <main className={styles.container}>
@@ -9,7 +12,7 @@ const Podcasts = ({ user }) => {
                 </h1>
             </main>
             <body>
-
+                <SearchForm suggestions={suggestions} />
             </body>
         </>
     )

@@ -34,9 +34,6 @@ const NavBar = ({ user, handleLogout }) => {
 							</p>
 							
 					</div>
-					<div class='submit'>
-						<SearchForm />
-					</div>
 				</nav>
 			) : (
 				<nav>
@@ -61,9 +58,6 @@ const NavBar = ({ user, handleLogout }) => {
 							<p class = 'pc'>
 								<Link to="/podcasts">Podcasts</Link>
 							</p>
-					</div>
-					<div class='submit'>
-						<SearchForm />
 					</div>
 				</nav>
 			)}

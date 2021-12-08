@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getSuggestions } from '../../services/apiService'
-import Music from '../../pages/Music/Music'
+import SuggestionResultsPage from '../../pages/SuggestionResultsPage/SuggestionResultsPage'
+import './SearchForm.css'
+
 
 
 const SearchForm = (props) => {
@@ -30,6 +32,7 @@ const [suggestions, setSuggestions] = useState([])
     } catch (err) {
       console.log(err)
     }
+    
   }
   const { name, type } = formData
 
@@ -63,7 +66,7 @@ const [suggestions, setSuggestions] = useState([])
           Get Suggestions
         </button>
     </form>
-    <Music suggestions={suggestions} />
+    <SuggestionResultsPage suggestions={suggestions} />
     </>
   );
 }

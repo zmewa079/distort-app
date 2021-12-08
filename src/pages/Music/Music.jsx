@@ -1,6 +1,7 @@
 import styles from './Music.css'
-import AddMusic from '../../components/AddSuggestion/AddSuggestion'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
+import SearchForm from '../../components/SearchForm/SearchForm'
 
 const Music = ({ user, suggestions }) => {
     return (
@@ -11,15 +12,10 @@ const Music = ({ user, suggestions }) => {
                 </h1>
             </main>
             <body>
-            {suggestions?.Similar?.Results.map(suggestion =>
-            <>
+
                 <div>
-                    <p></p>
-                    <AddMusic suggestion={suggestion}/>
-                    <h2>{<Link to="/details" state={suggestion}>{suggestion.Name}</Link>}</h2>
+                    <SearchForm suggestions={suggestions} />
                 </div>
-            </>  
-            )}
             </body>
         </>
     )
@@ -28,5 +24,4 @@ const Music = ({ user, suggestions }) => {
 export default Music
 
 
-//map the result to a div
-//each div, map info inside the result (name, descriptions)[suggestionData.name]
+
