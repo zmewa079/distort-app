@@ -1,12 +1,13 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom'
+import List from '../../components/List/List';
 
 const CreateList = () => {
 
-
 return ( 
     <>
-    
+    <h2>Create a New List</h2>
+    <List />
+
     </>
   );
 }

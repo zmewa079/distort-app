@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom'
-import List from '../../components/List/List';
+import { Link } from 'react-router-dom';
 
 
 const Profile = ({loggedInUser}) => {
@@ -32,7 +32,7 @@ const user = location.state
             <h2>
             Podcast List: {user.podcastList}
             </h2>
-            <List />
+            {<Link to="/create-list" ><button>Create List</button></Link>}
             </body> 
         </main>
     </>
@@ -41,4 +41,17 @@ const user = location.state
 
 export default Profile
 
+// {loggedInUser.profile === user.profile ? 
+//     <form
+//     > 
+//     <h2>List</h2>
+//     <input placeholder=""
+//         type="text"
+//         name="name"
+//     />
+//     <button >Add List</button>
+//     </form>
+//     :
+//     ''
+//     }
 

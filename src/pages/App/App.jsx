@@ -11,7 +11,7 @@ import Podcasts from '../Podcasts/Podcasts.jsx'
 import Music from '../Music/Music.jsx'
 import Profile from '../Profile/Profile'
 import Details from '../Details/Details'
-import Lists from '../Lists/Lists'
+import CreateList from '../CreateList/CreateList'
 
 const App = () => {
 	const [user, setUser] = useState(authService.getUser())
@@ -40,7 +40,7 @@ const App = () => {
 				<Route path='/music' element={<Music user={user} />} />
 				<Route path='/profile' element={<Profile loggedInUser={user} />} />
 				<Route path='/details' element={<Details />} />
-				<Route path='/lists' element={<Lists />} />
+				<Route path='/create-list' element={<CreateList />} />
 				
 			</Routes>
 		</>
