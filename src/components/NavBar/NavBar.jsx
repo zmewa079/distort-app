@@ -10,27 +10,27 @@ const NavBar = ({ user, handleLogout }) => {
 				<nav>
 					<div class='toggle'>
 							<p class='distort'>
-								<button id='togglebtn'><Link to="/" id="link">Distort</Link></button>
+								<Link to="/">Distort</Link>
 							</p>
 							<p class = 'welcome'>
-								Welcome, <button id='welcomebtn'><Link to="/profile" id="link" state={user}>{user.name}</Link></button>
+								Welcome, <Link to="/profile" state={user}>{user.name}</Link>
 							</p>
 							<p class = 'users'>
-								<button id='togglebtn'><Link to="/users" id="link" >Users</Link></button>
+								<Link to="/users">Users</Link>
 							</p>
 							<p class = 'logout'>
-								<button id='togglebtn'><Link to='' onClick={handleLogout} id="link" >Log Out</Link></button>
+								<Link to='' onClick={handleLogout}>Log Out</Link>
 							</p>
 					</div>
 					<div class='nav'>
 							<p class = 'mv'>
-								<button id='navbtn'><Link to="/movies" id="link" >Movies</Link></button>
+								<Link to="/movies">Movies</Link>
 							</p>
 							<p class = 'msc'>
-								<button id='navbtn'><Link to="/music" id="link" >Music</Link></button>
+								<Link to="/music">Music</Link>
 							</p>
 							<p class = 'pc'>
-								<button id='navbtn'><Link to="/Podcasts" id="link" >Podcasts</Link></button>
+								<Link to="/Podcasts">Podcasts</Link>
 							</p>
 							
 					</div>
@@ -39,24 +39,24 @@ const NavBar = ({ user, handleLogout }) => {
 				<nav>
 					<div class='toggle'>
 						<p class='distort'>
-							<button id="togglebtn"><Link to="/" id="link" >Distort</Link></button>
+							<Link to="/">Distort</Link>
 						</p>
 						<p class= 'login'>
-							<button id="togglebtn"><Link to="/login" id="link" >Log In</Link></button>
+							<Link to="/login">Log In</Link>
 						</p>
 						<p class = 'signup'>
-							<button id="togglebtn"><Link to="/signup" id="link" >Sign Up</Link></button>
+							<Link to="/signup">Sign Up</Link>
 						</p>
 					</div>
 					<div class='nav'>
 							<p class = 'mv'>
-								<button id="navbtn"><Link to="/movies" id="link" >Movies</Link></button>
+								<Link to="/movies">Movies</Link>
 							</p>
 							<p class = 'msc'>
-								<button id="navbtn"><Link to="/music" id="link" >Music</Link></button>
+								<Link to="/music">Music</Link>
 							</p>
 							<p class = 'pc'>
-								<button id="navbtn"><Link to="/podcasts" id="link" >Podcasts</Link></button>
+								<Link to="/podcasts">Podcasts</Link>
 							</p>
 					</div>
 				</nav>
