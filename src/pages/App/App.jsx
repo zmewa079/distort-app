@@ -13,9 +13,11 @@ import Profile from '../Profile/Profile'
 import Details from '../Details/Details'
 import CreateList from '../CreateList/CreateList'
 
+
 const App = () => {
 	const [user, setUser] = useState(authService.getUser())
 	const navigate = useNavigate()
+
 
 	const handleLogout = () => {
 		authService.logout()
@@ -29,6 +31,7 @@ const App = () => {
 
 	return (
 		<>
+		<body>
 			<NavBar user={user} handleLogout={handleLogout} />
 			<Routes>
 				<Route path='/' element={<Landing user={user} />} />
@@ -41,8 +44,8 @@ const App = () => {
 				<Route path='/profile' element={<Profile loggedInUser={user} />} />
 				<Route path='/details' element={<Details />} />
 				<Route path='/create-list' state={user} element={<CreateList />} />
-				
 			</Routes>
+			</body>
 		</>
 	);
 }

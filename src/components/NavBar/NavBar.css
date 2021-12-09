@@ -13,7 +13,7 @@ button {
 }
 
 body {
-    background-color: purple;
+    background-color: black;
     margin: 0;
 }
 
@@ -21,7 +21,7 @@ body {
     height: 50px;
     display: grid;
     grid-template-columns: 20% 60% 10% 10%;
-    background-color: aqua;
+    background-color: #26184a;
     justify-items: center;
 }    
 
@@ -41,8 +41,25 @@ body {
     grid-column: 4;
 }
 
-.distort {
+#distortbtn {
     grid-column: 2;
+    background-color: #26184a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+    display: block;
+    
+}
+
+#distortbtn:hover {
+    background-color: white;
+}
+
+.distort:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 .welcome {
@@ -54,19 +71,26 @@ body {
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color:seagreen;
+    background-color:#26184a;
     text-align: center;
     align-items: center;
+}
+
+#mvbtn, #mscbtn, #pcbtn {
+    background-color: #26184a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+    display: block;
+}
+
+#mvbtn:hover, #mscbtn:hover, #pcbtn:hover {
+    background-color: white;
 }
 
 .mv {
     grid-column: 2;
 }
 
-.msc {
 
-}
-
-.pc {
-
-}

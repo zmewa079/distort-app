@@ -10,7 +10,7 @@ const NavBar = ({ user, handleLogout }) => {
 				<nav>
 					<div class='toggle'>
 							<p class='distort'>
-								<Link to="/">Distort</Link>
+								<button id='distortbtn'><Link to="/">Distort</Link></button>
 							</p>
 							<p class = 'welcome'>
 								Welcome, <Link to="/profile" state={user}>{user.name}</Link>
@@ -24,13 +24,13 @@ const NavBar = ({ user, handleLogout }) => {
 					</div>
 					<div class='nav'>
 							<p class = 'mv'>
-								<Link to="/movies">Movies</Link>
+								<button id="mvbtn"><Link to="/movies">Movies</Link></button>
 							</p>
 							<p class = 'msc'>
-								<Link to="/music">Music</Link>
+								<button id="mscbtn"><Link to="/music">Music</Link></button>
 							</p>
 							<p class = 'pc'>
-								<Link to="/Podcasts">Podcasts</Link>
+								<button id="pcbtn"><Link to="/Podcasts">Podcasts</Link></button>
 							</p>
 							
 					</div>
