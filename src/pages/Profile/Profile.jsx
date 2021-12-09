@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import  './Profile.css'
 
 
 const Profile = ({loggedInUser}) => {
@@ -11,6 +12,7 @@ const user = location.state
         <>
         <main >
             <body>
+            <h1>{user.name}'s Profile Page</h1>
             <h2>
             Name: {user.name}
             </h2>

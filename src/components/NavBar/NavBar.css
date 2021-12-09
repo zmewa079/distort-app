@@ -35,6 +35,10 @@ body {
     display: block;
 }
 
+#togglebtn:hover {
+    background-color: grey;
+}
+
 .login {
     grid-column: 3;
 }
