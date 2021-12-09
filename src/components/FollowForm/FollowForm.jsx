@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './FollowForm.css'
 
 const FollowForm = (props) => {
     const [formData, setformData] = useState({
@@ -17,7 +18,7 @@ const FollowForm = (props) => {
     
     return (
         <form onSubmit={handleSubmit}>
-            <button>Follow</button>
+            <button id="followbtn">Follow</button>
         </form>
     );
 }

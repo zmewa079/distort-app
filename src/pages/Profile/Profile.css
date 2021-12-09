@@ -1,3 +1,30 @@
-h2 {
+
+
+#listbtn {
+  margin-right: .5rem;
+  background-color: black;
   color: white;
+  font-size: 17px;
+  border-radius: 16px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+#listbtn:hover {
+  background-color: grey;
+}
+
+#profilecontent {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  color: white;
+  border: solid white;
+  padding: 50px;
+  background-color: #26184a;
+  border-radius: 16px;
+  margin-left: 25em;
+  margin-right: 25em;
 }
