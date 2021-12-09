@@ -1,3 +1,20 @@
-p {
-  color: white;
+.searchForm {
+    background-color: black;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.typelst {
+    height: 21px;
+    border-radius: 16px;
+}
+
+.buttonfrm {
+    height: 21px;
+    border-radius: 16px;
+}
+
+.inputlst {
+    border-radius: 16px;
 }

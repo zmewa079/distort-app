@@ -42,30 +42,37 @@ const [suggestions, setSuggestions] = useState([])
 
   return (
     <>
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-    > 
-      <p>Name</p>
-      <input placeholder="Enter a name"
-        type="text"
-        value={name}
-        name="name"
+      <form
+        class='searchForm'
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        > 
+        
+        <input 
+          class='inputlst'
+          placeholder="Enter a name"
+          type="text"
+          value={name}
+          name="name"
+          onChange={handleChange}
+        />
+        <select 
+        class='typelst'
+        name="type" 
+        placeholder="Select Type"
         onChange={handleChange}
-      />
-      <br />
-        <p>Type</p>
-        <select name="type" placeholder="Select Type" onChange={handleChange}>
-          <option value="">Select Category</option>
-          <option value="movie">Movie</option>
-          <option value="music">Music</option>
-          <option value="podcast">Podcast</option>
+        >
+            <option value="">Select Category</option>
+            <option value="movie">Movie</option>
+            <option value="music">Music</option>
+            <option value="podcast">Podcast</option>
         </select>
-      <br />
-        <button disabled={isFormInvalid()}>
-          Get Suggestions
-        </button>
-    </form>
+          <button 
+            class='buttonfrm'
+            disabled={isFormInvalid()}>
+            🔎
+          </button>
+      </form>
     <SuggestionResultsPage suggestions={suggestions} />
     </>
   );
