@@ -13,7 +13,7 @@ button {
 }
 
 body {
-    background-color: purple;
+    background-color: black;
     margin: 0;
 }
 
@@ -21,9 +21,24 @@ body {
     height: 50px;
     display: grid;
     grid-template-columns: 20% 60% 10% 10%;
-    background-color: aqua;
+    background-color: #26184a;
     justify-items: center;
 }    
+
+#togglebtn {
+    grid-column: 3;
+    background-color: #26184a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+    display: block;
+    font-size: 15px;
+}
+
+#togglebtn:hover {
+    background-color: grey;
+}
 
 .login {
     grid-column: 3;
@@ -33,16 +48,10 @@ body {
     grid-column: 4;
 }
 
-.users {
-    grid-column: 3;
-}
 
-.logout {
-    grid-column: 4;
-}
-
-.distort {
-    grid-column: 2;
+#link {
+    color: white;
+    text-decoration: none;
 }
 
 .welcome {
@@ -54,19 +63,27 @@ body {
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color:seagreen;
+    background-color:#26184a;
     text-align: center;
     align-items: center;
+}
+
+#navbtn {
+    background-color: #26184a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+    display: block;
+    font-size: 15px;
+}
+
+#navbtn:hover {
+    background-color: grey;
 }
 
 .mv {
     grid-column: 2;
 }
 
-.msc {
 
-}
-
-.pc {
-
-}

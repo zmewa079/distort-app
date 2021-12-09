@@ -1,6 +1,6 @@
 import SearchForm from "../../components/SearchForm/SearchForm"
 import { Link } from "react-router-dom"
-import AddMusic from '../../components/AddSuggestion/AddSuggestion'
+import AddSuggestion from '../../components/AddSuggestion/AddSuggestion'
 import { getSuggestions } from "../../services/apiService"
 
 const SuggestionResultsPage = ({user, suggestions}) => {
@@ -21,7 +21,7 @@ const SuggestionResultsPage = ({user, suggestions}) => {
                     <h2>
                         {<Link to="/details" state={suggestion}>{suggestion.Name}</Link>}
                     </h2>
-                    <AddMusic suggestion={suggestion}/>
+                    <AddSuggestion suggestion={suggestion}/>
                 </div>
             </>  
             )}
