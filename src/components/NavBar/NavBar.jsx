@@ -39,24 +39,24 @@ const NavBar = ({ user, handleLogout }) => {
 				<nav>
 					<div class='toggle'>
 						<p class='distort'>
-							<Link to="/" id="link" >Distort</Link>
+							<button id="togglebtn"><Link to="/" id="link" >Distort</Link></button>
 						</p>
 						<p class= 'login'>
-							<Link to="/login" id="link" >Log In</Link>
+							<button id="togglebtn"><Link to="/login" id="link" >Log In</Link></button>
 						</p>
 						<p class = 'signup'>
-							<Link to="/signup" id="link" >Sign Up</Link>
+							<button id="togglebtn"><Link to="/signup" id="link" >Sign Up</Link></button>
 						</p>
 					</div>
 					<div class='nav'>
 							<p class = 'mv'>
-								<Link to="/movies" id="link" >Movies</Link>
+								<button id="navbtn"><Link to="/movies" id="link" >Movies</Link></button>
 							</p>
 							<p class = 'msc'>
-								<Link to="/music" id="link" >Music</Link>
+								<button id="navbtn"><Link to="/music" id="link" >Music</Link></button>
 							</p>
 							<p class = 'pc'>
-								<Link to="/podcasts" id="link" >Podcasts</Link>
+								<button id="navbtn"><Link to="/podcasts" id="link" >Podcasts</Link></button>
 							</p>
 					</div>
 				</nav>
