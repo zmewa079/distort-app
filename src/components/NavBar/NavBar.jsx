@@ -13,7 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
 								<button id='togglebtn'><Link to="/" id="link">Distort</Link></button>
 							</p>
 							<p class = 'welcome'>
-								Welcome, <button id='togglebtn'><Link to="/profile" id="link" state={user}>{user.name}</Link></button>
+								Welcome, <button id='welcomebtn'><Link to="/profile" id="link" state={user}>{user.name}</Link></button>
 							</p>
 							<p class = 'users'>
 								<button id='togglebtn'><Link to="/users" id="link" >Users</Link></button>

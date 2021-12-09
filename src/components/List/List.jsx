@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './List.css'
 
 
 const List = (props) => {
@@ -34,10 +35,12 @@ const List = (props) => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
+      className='container'
     >
     <div>
     <h4>Name of New List</h4>
     <input
+      className='label'
       type="text"
       autoComplete="off"
       placeholder='name of new list'
@@ -48,6 +51,7 @@ const List = (props) => {
       /> 
     </div>
     <input
+      className='label'
       type="text"
       autoComplete="off"
       placeholder='description'
@@ -56,8 +60,8 @@ const List = (props) => {
       name="description"
       onChange={handleChange}
       />
-    <button>Create List</button>
-    {<Link to='/' ><button>Cancel</button></Link>}
+    <button className='button'>Create List</button>
+    {<Link to='/' ><button className='button'>Cancel</button></Link>}
     </form>
   );
 }

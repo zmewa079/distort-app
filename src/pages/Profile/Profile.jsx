@@ -13,6 +13,7 @@ const user = location.state
         <main >
             <body>
             <h1>{user.name}'s Profile Page</h1>
+            <div id="profilecontent">
             <h2>
             Name: {user.name}
             </h2>
@@ -37,11 +38,12 @@ const user = location.state
             {loggedInUser.profile === user.profile ? 
             <form
             > 
-            {<Link to="/create-list" ><button>Create List</button></Link>}
+            {<Link to="/create-list" ><button id="listbtn">Create List</button></Link>}
             </form>
             :
             ''
             }
+            </div>
             </body> 
         </main>
     </>
