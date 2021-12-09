@@ -10,27 +10,27 @@ const NavBar = ({ user, handleLogout }) => {
 				<nav>
 					<div class='toggle'>
 							<p class='distort'>
-								<button id='distortbtn'><Link to="/">Distort</Link></button>
+								<button id='togglebtn'><Link to="/" id="link">Distort</Link></button>
 							</p>
 							<p class = 'welcome'>
-								Welcome, <Link to="/profile" state={user}>{user.name}</Link>
+								Welcome, <button id='togglebtn'><Link to="/profile" id="link" state={user}>{user.name}</Link></button>
 							</p>
 							<p class = 'users'>
-								<Link to="/users">Users</Link>
+								<button id='togglebtn'><Link to="/users" id="link" >Users</Link></button>
 							</p>
 							<p class = 'logout'>
-								<Link to='' onClick={handleLogout}>Log Out</Link>
+								<button id='togglebtn'><Link to='' onClick={handleLogout} id="link" >Log Out</Link></button>
 							</p>
 					</div>
 					<div class='nav'>
 							<p class = 'mv'>
-								<button id="mvbtn"><Link to="/movies">Movies</Link></button>
+								<button id='navbtn'><Link to="/movies" id="link" >Movies</Link></button>
 							</p>
 							<p class = 'msc'>
-								<button id="mscbtn"><Link to="/music">Music</Link></button>
+								<button id='navbtn'><Link to="/music" id="link" >Music</Link></button>
 							</p>
 							<p class = 'pc'>
-								<button id="pcbtn"><Link to="/Podcasts">Podcasts</Link></button>
+								<button id='navbtn'><Link to="/Podcasts" id="link" >Podcasts</Link></button>
 							</p>
 							
 					</div>
@@ -39,24 +39,24 @@ const NavBar = ({ user, handleLogout }) => {
 				<nav>
 					<div class='toggle'>
 						<p class='distort'>
-							<Link to="/">Distort</Link>
+							<Link to="/" id="link" >Distort</Link>
 						</p>
 						<p class= 'login'>
-							<Link to="/login">Log In</Link>
+							<Link to="/login" id="link" >Log In</Link>
 						</p>
 						<p class = 'signup'>
-							<Link to="/signup">Sign Up</Link>
+							<Link to="/signup" id="link" >Sign Up</Link>
 						</p>
 					</div>
 					<div class='nav'>
 							<p class = 'mv'>
-								<Link to="/movies">Movies</Link>
+								<Link to="/movies" id="link" >Movies</Link>
 							</p>
 							<p class = 'msc'>
-								<Link to="/music">Music</Link>
+								<Link to="/music" id="link" >Music</Link>
 							</p>
 							<p class = 'pc'>
-								<Link to="/podcasts">Podcasts</Link>
+								<Link to="/podcasts" id="link" >Podcasts</Link>
 							</p>
 					</div>
 				</nav>

@@ -25,6 +25,16 @@ body {
     justify-items: center;
 }    
 
+#togglebtn {
+    grid-column: 3;
+    background-color: #26184a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+    display: block;
+}
+
 .login {
     grid-column: 3;
 }
@@ -33,32 +43,9 @@ body {
     grid-column: 4;
 }
 
-.users {
-    grid-column: 3;
-}
 
-.logout {
-    grid-column: 4;
-}
-
-#distortbtn {
-    grid-column: 2;
-    background-color: #26184a;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    margin: auto;
-    display: block;
-    
-}
-
-#distortbtn:hover {
-    background-color: white;
-}
-
-.distort:link {
+#link {
     color: white;
-    background-color: transparent;
     text-decoration: none;
 }
 
@@ -76,7 +63,7 @@ body {
     align-items: center;
 }
 
-#mvbtn, #mscbtn, #pcbtn {
+#navbtn {
     background-color: #26184a;
     border: none;
     cursor: pointer;
@@ -85,8 +72,8 @@ body {
     display: block;
 }
 
-#mvbtn:hover, #mscbtn:hover, #pcbtn:hover {
-    background-color: white;
+#navbtn:hover {
+    background-color: grey;
 }
 
 .mv {
