@@ -27,6 +27,7 @@
 .hello {
     grid-column: 1/6;
     background-color: #26184a;
+    border-radius: 16px;
 }
 
 .mvlst {
