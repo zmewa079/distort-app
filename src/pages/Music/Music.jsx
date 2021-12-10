@@ -8,7 +8,7 @@ const Music = ({ props, suggestions }) => {
 
     var str = "Tupac Amaru Shakur ( TOO-pahk shə-KOOR; born Lesane Parish Crooks, June 16, 1971 – September 13, 1996), better known by his stage name 2Pac and by his alias Makaveli, was an American rapper, songwriter, and actor. He is widely considered to be one of the most influential rappers of all time. Much of Shakur's work has been noted for addressing contemporary social issues that plagued inner cities, and he has often been considered a symbol of activism against inequality.Shakur was born in Manhattan...";
 
-    var res = str.substring(0,202);
+    var res = str.substring(0,1000);
 
     return (
         <div >
