@@ -9,9 +9,9 @@ const Landing = ({ user }) => {
 
   var str3 = "Bad Friends (バッド・フレンズ, Baddo Furenzu) is a 2009 tribute album, featuring a variety of artists covering songs written by Yū Aku for the Japanese duo Pink Lady. It was released on December 16, 2009. The album's name comes from Akuyū (悪友), which translates to \"Bad friend\" and is the origin of Yū Aku's name.The final track, \"Kawahara no Ishikawa Goemon\" was originally recorded by Eiichi Ohtaki (under the pseudonym \"Niagara Fallin' Stars\") on his 1978 album Let's Ondo Again. This version is performed..."
 
-  var res1 = str1.substring(0, 202);
-  var res2 = str2.substring(0, 202);
-  var res3 = str3.substring(0, 197);
+  var res1 = str1.substring(0, 1000);
+  var res2 = str2.substring(0, 1000);
+  var res3 = str3.substring(0, 1000);
 
   return (
     <div>
