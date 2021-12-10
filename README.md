@@ -5,8 +5,7 @@
 + Users will be able to input an initial query of a movie, music artist, or podcast and get a list of suggestions from that same category.
 + Users will be able to add returned suggestions to their respective collection lists.
 + Users will be able to look at other suggestion lists created by other users on the application and follow them. 
-+ Users will be able to rate and review suggestions on their lists as well as the lists of others.
-+ Users will be able to update their collection lists.
+
 
 ---
 
@@ -52,3 +51,6 @@ Most people usually go off of the suggestions made by others in life. These sugg
 ---
 
 ## Stretch goals
++ Full CRUD accross all components
++ Users will be able to rate and review suggestions on their lists as well as the lists of others.
++ Users will be able to update their collection lists.
