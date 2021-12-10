@@ -24,12 +24,12 @@ const Music = ({ props, suggestions }) => {
                 </div>
                 <div class='testBox'>
                     <h3 class='testArtist'>
-                        Artist Name
+                        Tupac
                     </h3>
                     
                     <a 
                         class='testYoutube'
-                        href="https://www.youtube.com/">Link to artist Youtube
+                        href="https://www.youtube.com/results?search_query=tupac" target='_blank'>Link to Youtube
                     </a>
                     <p class='testDescription'>
                         {res}...

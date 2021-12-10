@@ -7,7 +7,7 @@ const Landing = ({ user }) => {
 
   var str2 = 'Deadpool is a 2016 American superhero film based on the Marvel Comics character of the same name. Distributed by 20th Century Fox, it is the eighth film in the X-Men film series. Directed by Tim Miller from a screenplay by Rhett Reese and Paul Wernick, it stars Ryan Reynolds in the title role alongside Morena Baccarin, Ed Skrein, T. J. Miller, Gina Carano, and Brianna Hildebrand. In the film, Wade Wilson hunts the man who gave him mutant abilities and a scarred physical appearance, becoming the ...'
 
-  var str3 = "Bad Friends (バッド・フレンズ, Baddo Furenzu) is a 2009 tribute album, featuring a variety of artists covering songs written by Yū Aku for the Japanese duo Pink Lady. It was released on December 16, 2009. The album's name comes from Akuyū (悪友), which translates to \"Bad friend\" and is the origin of Yū Aku's name.The final track, \"Kawahara no Ishikawa Goemon\" was originally recorded by Eiichi Ohtaki (under the pseudonym \"Niagara Fallin' Stars\") on his 1978 album Let's Ondo Again. This version is performed..."
+  var str3 = "The Joe Rogan Experience is a podcast hosted by American comedian and UFC color commentator Joe Rogan. It launched on December 24, 2009, by Rogan and comedian Brian Redban, who was its co-host and producer until 2012 when he was replaced by Jamie Vernon. By 2015, it was one of the world's most popular podcasts, regularly receiving millions of views per episode, also including a wide array of guests. Since December 2020, the podcast has been exclusively available on Spotify, with highlights uploaded onto YouTube...."
 
   var res1 = str1.substring(0, 1000);
   var res2 = str2.substring(0, 1000);
@@ -17,7 +17,7 @@ const Landing = ({ user }) => {
     <div>
       <main class='main'>
         <h1>
-          hello, {user ? user.name : "friend"}
+          Welcome to Distort
         </h1>
         <SearchForm />
       </main>
@@ -32,15 +32,17 @@ const Landing = ({ user }) => {
 
           <a
             class='testYoutube'
-            href="https://www.youtube.com/channel/UCMIdeeBjp_60Jv7ROpRxK6Q">
-            Link to artist Youtube
+            href="https://www.youtube.com/channel/UCMIdeeBjp_60Jv7ROpRxK6Q"
+            target='_blank'
+            >
+            Link to Youtube
           </a>
           <p class='testDescription'>
             {res1}...
           </p>
           <br />
           <button id='navbtn'>
-            <Link to="/movies" id="link" >Movies</Link>
+            <Link to="/movies" id="link" >Search Movie Suggestions</Link>
           </button>
         </div>
         <div class='finalbox'>
@@ -53,8 +55,9 @@ const Landing = ({ user }) => {
 
           <a
             class='testYoutube'
-            href="https://www.youtube.com/">
-            Link to artist Youtube
+            href="https://www.youtube.com/watch?v=ONHBaC-pfsk"
+            target='_blank'>
+            Link to Trailer
           </a>
           <p class='testDescription'>
             {res2}...
@@ -69,13 +72,14 @@ const Landing = ({ user }) => {
         </div>
         <div class='testBox'>
           <h3 class='testArtist'>
-            Bad Friends
+            Joe Rogan Experience
           </h3>
 
           <a
             class='testYoutube'
-            href="https://www.youtube.com/">
-            Link to artist Youtube
+            href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"
+            target='_blank'>
+            Link to Podcast
           </a>
           <p class='testDescription'>
             {res3}...
