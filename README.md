@@ -28,8 +28,8 @@ Most people usually go off of the suggestions made by others in life. These sugg
 ![image of erd](public/Distort-ERD.png)
 
 ### Final outloook of the application
-![image of application]()
-![image of application]()
+![image of application](https://i.ibb.co/whZjsX5/Landing.png)
+![image of application](https://i.ibb.co/Xj05kMc/SUCCESS.png)
 
 ---
 
