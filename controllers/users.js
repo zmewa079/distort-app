@@ -47,9 +47,24 @@ function addFollower(req, res) {
   })
 }
 
+function removeUser(req, res) {
+  Profile.findByIdAndDelete(req.params.id)
+  .then (profile => {
+    res.json(profile)
+  })
+}
+
+function removeProfile(req, res) {
+  User.findByIdAndDelete(req.params.id)
+  .then (user => {
+    res.json(user)
+  })
+}
+
 export {
   index,
   show,
   createList,
-  addFollower
+  addFollower,
+  removeUser as delete
 }

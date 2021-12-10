@@ -3,6 +3,8 @@ import * as userService from '../../services/userService'
 import './Users.css'
 import FollowForm from '../../components/FollowForm/FollowForm';
 import { Link } from 'react-router-dom';
+import { removeUser, removeProfile } from '../../services/userService';
+import { useNavigate } from 'react-router-dom';
 
 const Users = (props) => {
   const [users, setUsers] = useState([])
@@ -11,6 +13,15 @@ const Users = (props) => {
     userService.getAllUsers()
       .then(users => setUsers(users))
   }, [])
+
+let navigate = useNavigate()
+
+  const deleteUser = (profileId, userId) => {
+    removeUser(profileId)
+    removeProfile(userId)
+    props.setUser(null)
+    navigate('/')
+  }
 
   return (
 
@@ -26,7 +37,7 @@ const Users = (props) => {
               {<Link to="/profile" state={user.profile}>{user.name}</Link>}</h2>
                 <h2 class='mvlst' >Lists: {user.profile?.lists.length}</h2>
                 <h3 class='fdlst'>Followers (0)</h3>
-                {props.loggedInUser.profile === user.profile._id ? '' :
+                {props.loggedInUser.profile === user.profile._id ? <button onClick={() => deleteUser(props.loggedInUser.profile,props.loggedInUser._id)}>Delete</button> :
 
                   <FollowForm userToFollow={user.profile} userFollowing={props.loggedInUser.profile} />
                 }

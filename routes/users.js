@@ -13,5 +13,7 @@ router.get('/', checkAuth, usersCtrl.index)
 router.get('/:id', usersCtrl.show)
 router.post('/:id/createList', usersCtrl.createList)
 router.patch('/:id/follow', usersCtrl.addFollower)
+router.delete('/user/:id', checkAuth, usersCtrl.delete)
+router.delete('/:id', checkAuth, usersCtrl.delete)
 
 export { router }

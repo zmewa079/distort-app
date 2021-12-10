@@ -37,7 +37,7 @@ const App = () => {
 				<Route path='/' element={<Landing user={user} />} />
 				<Route path='/signup' element={<Signup handleSignupOrLogin={handleSignupOrLogin} />} />
 				<Route path='/login' element={<Login handleSignupOrLogin={handleSignupOrLogin} />} />
-				<Route path='/users' element={user ? <Users loggedInUser={user} /> : <Navigate to='/login' />} />
+				<Route path='/users'  element={user ? <Users loggedInUser={user} setUser={setUser} /> : <Navigate to='/login' />} />
 				<Route path='/movies' element={<Movies user={user} />} />
 				<Route path='/podcasts' element={<Podcasts user={user} />} />
 				<Route path='/music' element={<Music user={user} />} />
