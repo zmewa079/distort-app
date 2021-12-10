@@ -54,3 +54,4 @@ Most people usually go off of the suggestions made by others in life. These sugg
 + Full CRUD accross all components
 + Users will be able to rate and review suggestions on their lists as well as the lists of others.
 + Users will be able to update their collection lists.
++ Logo for the app
