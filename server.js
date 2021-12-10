@@ -13,6 +13,7 @@ import { router as usersRouter } from './routes/users.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as tasteDiveApiRouter } from './routes/tasteDiveApi.js'
 
+app.use(express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'build')))
 app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
