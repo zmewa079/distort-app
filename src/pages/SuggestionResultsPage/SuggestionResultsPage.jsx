@@ -1,7 +1,5 @@
-import SearchForm from "../../components/SearchForm/SearchForm"
 import { Link } from "react-router-dom"
 import AddSuggestion from '../../components/AddSuggestion/AddSuggestion'
-import { getSuggestions } from "../../services/apiService"
 import './SuggestionResultsPage.css'
 
 const SuggestionResultsPage = ({user, suggestions}) => {
@@ -20,8 +18,8 @@ const SuggestionResultsPage = ({user, suggestions}) => {
                         {<Link to="/details" state={suggestion}>{suggestion.Name}</Link>}
                     </h2>
                     <a class ='youtube'
-                        href={suggestion.yUrl}>
-                        Artist Youtube                     
+                        href={suggestion.yUrl} target='_blank'>
+                        Youtube                     
                     </a>
                     <p class='teaser'>
                         {suggestion.wTeaser}

@@ -32,11 +32,11 @@ let navigate = useNavigate()
 
           {users.map(user => 
               <div class='pfcard'>
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwUXumi2-4L46JVm7bryAzGyWCD1SHYLfIw&usqp=CAU'></img>
+                <img height='275px'src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'></img>
                 <h2 class='name' key={user._id}>
               {<Link to="/profile" state={user.profile}>{user.name}</Link>}</h2>
                 <h2 class='mvlst' >Lists: {user.profile?.lists.length}</h2>
-                <h3 class='fdlst'>Followers (0)</h3>
+                <h3 class='fdlst'>Followers ({user.profile.followers.length})</h3>
                 {props.loggedInUser.profile === user.profile._id ? <button onClick={() => deleteUser(props.loggedInUser.profile,props.loggedInUser._id)}>Delete</button> :
 
                   <FollowForm userToFollow={user.profile} userFollowing={props.loggedInUser.profile} />
