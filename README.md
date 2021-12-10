@@ -15,7 +15,7 @@ Most people usually go off of the suggestions made by others in life. These sugg
 ---
 
 ## Getting Started: 
-### Click [here]() to go to the application.
+### Click [here](https://distort.herokuapp.com) to go to the application.
 ---
 
 ## Images
